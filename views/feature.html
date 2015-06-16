@@ -1,10 +1,368 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<html ng-app="drag" lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>languages</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
 </head>
 <body>
+<!-- Fixes Navigation Bar with drop down menu
+==========================================================  -->
 
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type = "button" class="navbar-toggle" data-toggle = "collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span></button>
+            <a href = "#" class = "navbar-brand">KPI STUDENT</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../views/index.html">Home</a></li>
+                <li><a href="../views/about.html">About</a></li>
+                <li><a href="../views/feature.html">Features</a></li>
+                <li class = "dropdown">
+                    <a href="#" class = "dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Angular Tutorials</a></li>
+                        <li><a href="#">PHP Tutorials</a></li>
+                        <li><a href="#">JAVA Tutorials</a></li>
+                        <li><a href="#">CSS Tutorials</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br/><br/><br/>
+
+<!-- Accordion
+==========================================================-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Accordion</h2>
+            <hr/>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#section1">Question 1</a>
+                        </h4></div>
+
+                    <div class="panel-collapse collapse in" id = "section1">
+                        <div class="panel-body">This will contain some text</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#section2">Question 2</a>
+                        </h4></div>
+
+                    <div class="panel-collapse collapse" id = "section2">
+                        <div class="panel-body">This will contain some text</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#section3">Question 3</a>
+                        </h4></div>
+
+                    <div class="panel-collapse collapse" id = "section3">
+                        <div class="panel-body">This will contain some text</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tab
+==========================================================-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Tab</h2><hr/>
+
+            <!-- Tabs Navigation
+==========================================================-->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">Section1</a></li>
+                <li><a href="#tab2" data-toggle="tab">Section2</a></li>
+                <li><a href="#tab3" data-toggle="tab">Section3</a></li>
+            </ul>
+
+            <!-- Tab Sections
+==========================================================-->
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+                    This is our first Tab ....This is our first Tab ....
+                    This is our first Tab ....This is our first Tab ....
+                    This is our first Tab ....This is our first Tab ....
+                    This is our first Tab ....This is our first Tab ....
+                </div>
+                <div class="tab-pane" id="tab2">
+                    My name is Termonaotr....
+                    My name is Termonaotr....
+                    My name is Termonaotr....
+                    My name is Termonaotr....
+                </div>
+                <div class="tab-pane" id="tab3">
+                    Hello Max, how is your day...l
+                    Hello Max, how is your day....
+                    Hello Max, how is your day....
+                    Hello Max, how is your day....
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Tooltips and popover
+==========================================================-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Tooltip</h2>
+            <hr/>
+            <a href="#" class = "btn btn-primary" id="myToolTip" data-toogle = "tooltip" title = "My Tool Text" data-placement = "right">Tooltip</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Popover</h2>
+            <hr/>
+            <button id = "myPopOver" class = "btn btn-danger" data-toggle="popover" title = "Hello Max, How is it going">Popover</button>
+        </div>
+    </div>
+</div>
+
+<!-- Content Hover
+==========================================================-->
+
+<br/><br/><br/>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="../images/firstSmall.png" id = "d1"/>
+            <div class="contenthover">
+                <h3>Something here</h3>
+                <p>Hello Bro, how is yuor life, how is your deals..........</p>
+                <p><a href="#" class = "mybutton">Hello world</a></p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <img src="../images/secondSmall.png" id = "d2"/>
+            <div class="contenthover">
+                <h3>See here</h3>
+                <p>Hello Bro, what did you tell me yesterday..........</p>
+                <p><a href="#" class = "mybutton">Learn more</a></p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <img src="../images/thirdSmall.png" id = "d3"/>
+            <div class="contenthover">
+                <h3>It's awesome</h3>
+                <p>Hello Bro, let's play with us..........</p>
+                <p><a href="#" class = "mybutton">Clicl here</a></p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- Angular mini-form of checking
+==========================================================-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" ng-app>
+            <h2>Angular form</h2>
+            <hr/>
+            <div  ng-controller="InvoiceCntl">
+                <b>Invoice:</b>
+                <br>
+                <br>
+                <table>
+                    <tr><td>Quantity</td><td>Cost</td></tr>
+                    <tr>
+                        <td><input type="number" ng-pattern="/\d+/" step="1" min="0" ng-model="qty" required ></td>
+                        <td><input type="number" ng-model="cost" required ></td>
+                    </tr>
+                </table>
+                <hr>
+                <b>Total:</b> {{qty * cost | currency}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Angular API directive
+==========================================================-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>
+                Angular Api directive(move this image with your mouse)
+            </h2>
+            <hr/>
+            <img src="../images/firstSmall.png" draggable>
+        </div>
+    </div>
+</div>
+
+<!-- Angular 1 Startup app(Hello World)
+==========================================================-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h2>
+                Angular 1, Startup with Hello World
+            </h2>
+            <hr/>
+            <h5 ng-init=" name='World' ">Hello {{name}}!</h5>
+        </div>
+    </div>
+</div>
+
+<!-- Angular 2 Runtime app(Hello World with continuing)
+==========================================================-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h2>
+                Angular 2, Runtime with Hello World
+            </h2>
+            <hr/>
+            <input type="text" ng-model = "text"/>
+            <p>Hello {{text}}</p>
+        </div>
+    </div>
+</div>
+
+<!-- Angular 3 Scope
+==========================================================-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h2>
+                Angular 3, Scope
+            </h2>
+            <hr/>
+
+            <div ng-controller="GreetCtrl" class  = "ng-scope ng-binding">
+                Hello {{name}}!
+            </div>
+            <div ng-controller="ListCtrl" class="ng-scope">
+                <ol>
+                    <li ng-repeat="name in names" class="ng-scope ng-binding">{{name}}</li>
+                </ol>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Angular 3 Scope
+==========================================================-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Angular 4, template(view)</h2>
+            <hr/>
+            <div ng-init = "list = ['Chrome','Safari', 'Opera', 'Google']">
+                <input ng-model="list" ng-list/> <br/>
+                <input ng-model = "list" ng-list/> <br/>
+                <div>list = {{list}}</div>
+                <ol>
+                    <li ng-repeat = "item in list">
+                        {{item}}
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Angular 3 Scope
+==========================================================-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>
+                Angular 5, Filters
+            </h2>
+            <hr/>
+            <div ng-init="list = ['Chrome', 'Safari', 'Firefox', 'IE'] ">
+                Формат числа: {{ 1234567890 | number }} <br>
+                фильтрация массива <input ng-model="predicate">
+                {{ list | filter:predicate | json }}</div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer and Modal
+==========================================================-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <hr/>
+            <p>Copyright &copy; Creativity Tuts.
+                <a data-toggle = "modal" href="#myModal">KPI-STUDENT</a></p>
+            <!--  Modal   -->
+            <div class="modal fade" id="myModal" tabindex = "-1" role="dialog" aria-hidden = "true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Terms and Conditions</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>The text will go here....</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" type = "button" data-dismiss="modal">Close</button>
+                        </div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../scripts/main.js"></script>
 </body>
 </html>
